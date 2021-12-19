@@ -71,6 +71,30 @@ class Llist:
         temp= None
     
     
+    def getCounti(self):
+        
+        count= 0
+        temp= self.head
+        while temp!= None:
+            count+=1
+            temp= temp.next
+            
+        return count
+            
+        
+    def countNodesr(self,node):
+        if not node:
+            return 0
+        else:
+            
+            return 1 + self.countNodesr(node.next)
+        
+        
+    def count_node_wrapper(self):
+        return self.countNodesr(self.head)
+        
+        
+        
     
         
     def deleteNode(self,node):
@@ -168,6 +192,8 @@ llist.pop()
 llist.deleteKey(3)
 llist.deleteEnd()
 llist.deleteNode(llist.head.next)
+
 llist.printList()
 
+print(llist.count_node_wrapper())
 
