@@ -55,6 +55,22 @@ class Llist:
         self.head= self.head.next
         temp=None
         
+    def deleteEnd(self):
+        
+        if self.head==None:
+            self.head=None
+            return
+        
+        temp = self.head
+        
+        while temp.next:
+            prev= temp
+            temp= temp.next
+            
+        prev.next= None
+        temp= None
+            
+        
         
         
         
@@ -82,6 +98,7 @@ llist.push(89)
 llist.append(8)
 llist.insertAfter(llist.head,99)
 llist.pop()
+llist.deleteEnd()
 llist.printList()
 
 
