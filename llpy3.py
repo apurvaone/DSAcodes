@@ -69,6 +69,40 @@ class Llist:
             
         prev.next= None
         temp= None
+    
+    
+    
+        
+    def deleteNode(self,node):
+        
+        if node==None:
+            return None
+        
+        
+        
+        temp= self.head
+        
+        if temp==node:
+            self.head= self.head.next
+            temp= None
+            return
+        
+        
+        
+        while temp!= node:
+            prev= temp
+            temp= temp.next
+            
+        prev.next= temp.next
+        temp= None
+            
+        
+            
+        
+            
+            
+    
+        
         
      
     
@@ -100,7 +134,10 @@ class Llist:
             
             
             
-        
+            
+    
+            
+
         
         
         
@@ -130,6 +167,7 @@ llist.insertAfter(llist.head,99)
 llist.pop()
 llist.deleteKey(3)
 llist.deleteEnd()
+llist.deleteNode(llist.head.next)
 llist.printList()
 
 
