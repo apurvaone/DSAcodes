@@ -80,6 +80,52 @@ class Llist:
             temp= temp.next
             
         return count
+    
+    
+    
+    
+
+    def reverse_r(self,head):
+        if not head :
+            return None
+        
+        if not head.next:
+            self.head= head
+            return
+        
+        
+        self.reverse_r(head.next)
+        
+        head.next.next = head
+        
+        head.next= None
+        
+        
+        
+        
+            
+    
+    
+    def reverse_i(self):
+        
+        if ( not self.head):
+            return self.head
+        
+        prev= None
+        hd= self.head
+        
+        while hd:
+            curr= hd
+            hd= hd.next
+            curr.next= prev
+            prev= curr
+            
+        self.head= prev
+            
+        
+    
+    
+    
             
         
     def countNodesr(self,node):
@@ -192,8 +238,10 @@ llist.pop()
 llist.deleteKey(3)
 llist.deleteEnd()
 llist.deleteNode(llist.head.next)
-
+#llist.reverseIterative()
+llist.reverse_r(llist.head)
 llist.printList()
 
-print(llist.count_node_wrapper())
+
+#print(llist.count_node_wrapper())
 
