@@ -21,7 +21,9 @@ def bsearch_rec(arr,l,r,el):
     
         
         
-p= bsearch_rec([1,2,3,4,5,6,9],0,6,7)
+        
+        
+p= bsearch_rec([1,2,3,4,8,6,9],0,6,7)
 
 print(p)
     
