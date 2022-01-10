@@ -4,6 +4,9 @@ def bsearch_rec(arr,l,r,el):
     if l>r:
         return -1
     
+    
+    
+    
     mid= (l+r)//2
     
     if arr[mid]==el:
